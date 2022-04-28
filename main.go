@@ -24,7 +24,8 @@ func main() {
 	}
 	wg.Wait()
 
-	fmt.Printf("Compressed %d files in %fs.\n", i+1, time.Since(start).Seconds())
+	end := time.Since(start).Seconds()
+	fmt.Printf("Compressed %d files in %.3fs.\n", i+1, end)
 }
 
 func compress(filename string) error {
