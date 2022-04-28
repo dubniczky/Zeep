@@ -6,7 +6,7 @@ EXEC_NAME=zeep
 all: clean build run
 
 clean:
-	rm -f $(EXEC_NAME)
+	rm -f ./bin/*
 	rm -f ./$(TEST_FILES)/*.zip
 	rm -f ./$(TEST_FILES)/*.gz
 
