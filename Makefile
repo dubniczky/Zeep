@@ -13,8 +13,7 @@ clean:
 build: main.go
 	go build -o ./bin/$(EXEC_NAME) main.go
 
-publish: main.go
-	rm -rf ./bin/*
+publish: main.go clean
 	GOOS=linux   GOARCH=amd64 go build -o ./bin/$(EXEC_NAME)-linux-x64 main.go
 	GOOS=linux   GOARCH=386   go build -o ./bin/$(EXEC_NAME)-linux-x86 main.go
 	GOOS=linux   GOARCH=arm   go build -o ./bin/$(EXEC_NAME)-linux-arm main.go
